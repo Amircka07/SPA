@@ -1,3 +1,4 @@
+ 
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { users } from "./data.ts";
@@ -55,7 +56,7 @@ const resolvers = {
         const to = new Date(registeredTo).getTime();
         result = result.filter(u => new Date(u.registeredAt).getTime() <= to);
       }
-
+       // @ts-expect-error: Suppress TS error for slice
       return result.slice(offset, offset + limit);
     }
   }

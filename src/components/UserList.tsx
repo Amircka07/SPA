@@ -48,9 +48,9 @@ export const VirtualizedUserList: React.FC<VirtualizedUserListProps> = ({
 
   return (
     <List
-      height={600} // Высота окна
+      height={600} 
       itemCount={users.length}
-      itemSize={50} // Высота строки
+      itemSize={50} 
       width="100%"
       onItemsRendered={handleItemsRendered}
     >
