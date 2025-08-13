@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "concurrently \"vite\" \"ts-node src/server/index.ts\"",
+  "build": "tsc -b && vite build",
+  "lint": "eslint .",
+  "preview": "vite preview"
   },
   "dependencies": {
     "@apollo/client": "^3.13.9",
@@ -28,6 +28,7 @@
     "@types/react-dom": "^19.1.7",
     "@types/react-window": "^1.8.8",
     "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.2.0",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
