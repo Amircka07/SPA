@@ -4,14 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite\" \"ts-node src/server/index.ts\"",
-  "build": "tsc -b && vite build",
-  "lint": "eslint .",
-  "preview": "vite preview"
+    "dev": "concurrently \"vite\" \"ts-node api/server/index.ts\"",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@apollo/client": "^3.13.9",
     "@apollo/server": "^5.0.0",
+    "@as-integrations/express4": "^1.1.2",
     "apollo-server": "^3.13.0",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",

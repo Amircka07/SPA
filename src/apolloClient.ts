@@ -8,7 +8,7 @@ export const client = new ApolloClient({
         fields: {
           users: {
             keyArgs: ["name","email","country","registeredFrom","registeredTo"],
-            merge(existing: any[] = [], incoming: any[], { args }) {
+            merge(existing: unknown[] = [], incoming: unknown[], { args }) {
               const offset = (args?.offset ?? 0) as number;
               const merged = existing ? existing.slice(0) : [];
               for (let i = 0; i < incoming.length; i++) {
@@ -16,7 +16,7 @@ export const client = new ApolloClient({
               }
               return merged;
             },
-            read(existing: any[] | undefined, { args }) {
+            read(existing: unknown[] | undefined, { args }) {
               if (!existing) return undefined;
               const offset = (args?.offset ?? 0) as number;
               const limit = (args?.limit ?? existing.length) as number;

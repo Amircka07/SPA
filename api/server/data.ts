@@ -8,7 +8,7 @@ const pick = <T>(arr: T[]) => arr[Math.floor(Math.random()*arr.length)];
 const randomDate = (start: Date, end: Date) =>
   new Date(start.getTime() + Math.random()*(end.getTime()-start.getTime()));
 
-export const users: User[] = Array.from({length: 500}).map((_, i) => {
+export const users: User[] = Array.from({length: 200}).map((_, i) => {
   const first = pick(firstNames);
   const last  = pick(lastNames);
   const name  = `${first} ${last}`;

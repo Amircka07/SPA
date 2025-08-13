@@ -31,7 +31,7 @@ export function useInfiniteScroll(
               
               setTimeout(() => {
                 cooldown.current = false;
-              }, 500);
+              }, 300);
             });
         }
       },
